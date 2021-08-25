@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+
+
+
+<input/>
+<button>Compare com meu segredo N 0 - 10 </button>
+
+
+<script>
+
+	var segredo = Math.round(Math.random() * 10);
+	console.log(segredo);
+
+
+	var input = document.querySelector("input");//captura a Tag input do html para o javascript
+	
+
+
+	input.focus();//fica pronto para digitar no input
+
+	function verifica(){
+
+		if(input.value == segredo){//comparando o valor do input com o segredo//value para mostrar o valor capturado no html
+
+		alert("Você ACERTOU");//mensagem pop up
+		}else{
+
+		alert("Você ERROU!!!!");
+		}
+		input.value = "";
+		input.focus();
+	}
+
+	var button = document.querySelector("button");//captura a Tag button do html para o javascript
+
+	button.onclick = verifica;//para verificar apos o click
+
+
+</script>
